@@ -27,19 +27,36 @@
 <h1 style="color: red; font-size: 55px;">ŁATWO Z WAMI KURWY</h1>
      <h1 style="font-size: 50px;">🔥🔥🔥🔥🔥🔥🔥🔥</h1>
 
-    <div style="display:flex; gap:50px;">
-    <img src="Dance Rat GIF (1).gif" style="width: 500px;">
+   <div style="display:flex; gap:50px;">
+    <div style="position: relative; display: inline-block;">
+    <img src="Dance Rat GIF (1).gif" style="width: 800px;">
+
+    <div id="glosnik" onclick="startAudio()" 
+         style="
+         position: absolute;
+         top: -60px;
+         left: 50%;
+         transform: translateX(-50%);
+         font-size: 60px;
+         cursor: pointer;">
+         🔇
+    </div>
+</div>
+
     <img src="do strony.png">
 </div>
 
     <audio id="muza" loop>
     <source src="bulbasaurmp3.mp3" type="audio/mpeg">
 </audio>
-
 <script>
-document.addEventListener("click", function() {
-    document.getElementById("muza").play();
-});
+function startAudio() {
+    const audio = document.getElementById("muza");
+    const glosnik = document.getElementById("glosnik");
+
+    audio.play();
+    glosnik.style.display = "none";
+}
 </script>
 
 </body>
